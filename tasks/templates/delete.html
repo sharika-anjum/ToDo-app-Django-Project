@@ -1,0 +1,41 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<style>
+
+	body{
+		background: #EB5757;  /* fallback for old browsers */
+		background: -webkit-linear-gradient(to right, #000000, #EB5757);  /* Chrome 10-25, Safari 5.1-6 */
+		background: linear-gradient(to right, #000000, #EB5757); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+
+	}
+	.form{
+    	margin: 0;
+		font-size:36;
+    	position: absolute;
+    	top: 50%;
+    	left: 50%;
+    	margin-right: -50%;
+    	transform: translate(-50%, -50%) }
+	}
+
+</style>
+
+<body>
+	<nav class = "navbar">
+        <a href ="" class ="navbar-brand text-light" style="font-size:40px"><b>Docket_App</b></a>
+    </nav>
+
+
+		<form class = "form" method="POST" action="">
+			<h1 class="text-light">Delete Task</h1>
+			<p class="text-light">Are you sure you want to delete "{{item}}"?</p>
+
+			{% csrf_token %}
+			<a class="btn btn-sm btn-danger" href="{% url 'list' %}" >Cancel</a>
+			<input type="submit" class="btn btn-sm btn-warning" name="Confirm">
+		</form>
+
+
+</body>
