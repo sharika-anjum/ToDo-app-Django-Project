@@ -1,0 +1,43 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<style>
+
+	body{
+		background: #40E0D0;  /* fallback for old browsers */
+		background: -webkit-linear-gradient(to right, #FF0080, #FF8C00, #40E0D0);  /* Chrome 10-25, Safari 5.1-6 */
+		background: linear-gradient(to right, #FF0080, #FF8C00, #40E0D0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+
+
+	}
+	.text{
+    	margin: 0;
+		font-size:36;
+    	position: absolute;
+    	top: 50%;
+    	left: 50%;
+    	margin-right: -50%;
+    	transform: translate(-50%, -50%) }
+	}
+
+
+</style>
+
+<body>
+		<nav class = "navbar">
+        	<a href ="" class ="navbar-brand text-light" style="font-size:40px"><b>Docket_App</b></a>
+    	</nav>
+
+
+		<form class="text" method="POST" action="">
+			{% csrf_token %}
+			<a class="text-light"><br>
+			<h1>Edit Task</h1><br>
+			Task: {{form.title}}<br> Completed: {{form.complete}}</br></a></b>
+			</br><input type="submit" class="btn-block btn-lg btn-info" name="Update Task"></form>
+	
+	
+		</form>
+
+</body>
